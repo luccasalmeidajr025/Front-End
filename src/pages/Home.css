@@ -1,0 +1,11 @@
+.home-container {
+  margin-left: 260px;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #3b5bff;
+}
+
+.home-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

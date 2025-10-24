@@ -1,0 +1,153 @@
+.cadastro-page {
+  margin-left: 260px;
+  padding: 30px;
+  background: #f9f9ff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.page-titulo {
+  text-align: center;
+  color: #4a57e6;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.form-externo {
+  background: #ffffff;
+  border: 1px solid #e3e7f7;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(35, 40, 110, 0.06);
+  padding: 28px;
+  max-width: 1200px;
+  margin: 14px auto 40px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.form-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+
+.form-section {
+  background: #fbfcff;
+  border: 1px solid #e3e7f7;
+  border-radius: 10px;
+  padding: 20px 22px; 
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.form-section h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d1d35;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d7dbec;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 14px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px; 
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+}
+
+.grid-2 input {
+  margin-bottom: 0;
+}
+
+.form-section input,
+.form-section textarea {
+  max-width: 100%;
+  display: block;
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
+}
+
+.buttons {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+button.cancel {
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button.submit {
+  background: linear-gradient(90deg, #5a44f2, #704df8);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+button.cancel:hover,
+button.submit:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 900px) {
+  .cadastro-page {
+    margin-left: 0;
+    padding: 18px;
+  }
+  .form-externo {
+    padding: 18px;
+  }
+  .form-container {
+    grid-template-columns: 1fr;
+  }
+  .buttons {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

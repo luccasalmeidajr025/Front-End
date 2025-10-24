@@ -1,0 +1,10 @@
+import "./Home.css";
+
+export default function Home() {
+  return (
+    <div className="home-container">
+      <h1>Olá, Usuário 👋</h1>
+      <p>Bem-vindo ao sistema de acompanhamento TEA.</p>
+    </div>
+  );
+}
