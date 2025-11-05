@@ -5,6 +5,7 @@
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  position: relative;
 }
 
 .page-titulo {
@@ -27,7 +28,6 @@
   overflow: hidden;
 }
 
-
 .form-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -35,12 +35,11 @@
   box-sizing: border-box;
 }
 
-
 .form-section {
   background: #fbfcff;
   border: 1px solid #e3e7f7;
   border-radius: 10px;
-  padding: 20px 22px; 
+  padding: 20px 22px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -77,7 +76,7 @@ textarea {
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px; 
+  gap: 16px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 14px;
@@ -87,15 +86,43 @@ textarea {
   margin-bottom: 0;
 }
 
-.form-section input,
-.form-section textarea {
-  max-width: 100%;
-  display: block;
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  background-color: #fff;
 }
 
-.form-section:last-child {
-  margin-bottom: 0;
+.tag {
+  background-color: #ebe8ff;
+  color: #3a2fd8;
+  padding: 5px 10px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
 }
+
+.remove-tag {
+  background: none;
+  border: none;
+  color: #d64545;
+  margin-left: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.input-tag {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 13px;
+}
+
 
 .buttons {
   grid-column: 1 / -1;
@@ -118,7 +145,8 @@ button.cancel {
 }
 
 button.submit {
-  background: linear-gradient(90deg, #5a44f2, #704df8);
+  
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
   color: #fff;
   padding: 10px 22px;
   border-radius: 8px;
@@ -134,18 +162,49 @@ button.submit:hover {
   transform: translateY(-1px);
 }
 
+.mensagem-sucesso {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50; 
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  animation: fadeInOut 3s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
 
 @media (max-width: 900px) {
   .cadastro-page {
     margin-left: 0;
     padding: 18px;
   }
+
   .form-externo {
     padding: 18px;
   }
+
   .form-container {
     grid-template-columns: 1fr;
   }
+
   .buttons {
     flex-direction: row;
     justify-content: space-between;
